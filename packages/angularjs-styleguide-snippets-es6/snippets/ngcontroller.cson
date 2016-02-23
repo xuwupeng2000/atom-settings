@@ -1,0 +1,36 @@
+'.source.js':
+  'ngController':
+    'prefix': 'ngcontroller'
+    'body': """
+      (() => {
+          'use strict';
+
+          /**
+           * @ngdoc function
+           * @name ${2:controller}
+           * @module ${1:module}
+           * @description
+           *
+           * The `${2:controller}` controller ${5:description}.
+           *
+           */
+          angular
+              .module('${1:module}')
+              .controller('${2:controller}', ${2:controller});
+
+          ${2:controller}.$inject = ['${3:dependencies}'];
+
+          function ${2:controller}(${3:dependencies}) {
+              'ngInject';
+              const self = this;
+
+              activate();
+
+              ///////////
+
+              function activate() {
+
+              }
+          }
+      })();
+    """

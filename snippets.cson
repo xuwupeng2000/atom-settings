@@ -1,0 +1,172 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.source.js':
+  'function':
+    'prefix': 'f'
+    'body': """
+      function() {
+
+      }
+    """
+
+  'ngController':
+    prefix: 'ngcontroller'
+    body: """
+      (() => {
+        'use strict';
+
+        angular
+          .module('${1:module}')
+          .controller('${2:controller}', ${2:controller});
+
+        ${2:controller}.$inject = ['$scope', 'lodashFactory', '$log', $q];
+
+        function ${2:controller}($scope, _, $log, $q) {
+
+          activate();
+
+          function activate() {
+
+          }
+        }
+      })();
+    """
+
+  'ngFactory':
+    'prefix': 'ngfactory'
+    'body': """
+      (() => {
+        'use strict';
+
+        angular
+          .module('${1:module}')
+          .factory('${2:factory}', ${2:factory});
+
+        ${2:factory}.$inject = ['${3:dependencies}'];
+
+        function ${2:factory}(${3:dependencies}) {
+          const service = { };
+
+          return service;
+        }
+      })();
+    """
+
+  'ngFilter':
+    prefix: 'ngfilter'
+    body: """
+      (() => {
+        'use strict';
+
+        angular
+          .module('${1:module}')
+          .filter('${2:filter}', ${2:filter});
+
+        function ${2:filter}() {
+          return ${2:filter}Filter
+
+          function ${2:filter}Filter(${3:params}) {
+              return ${3:params};
+          }
+        }
+      })();
+    """
+
+  'ngService':
+    prefix: 'ngservice'
+    body: """
+      (() => {
+        'use strict';
+
+        angular
+          .module('${1:module}')
+          .service('${2:service}', ${2:service});
+
+        ${2:service}.$inject = ['${3:dependencies}'];
+
+        function ${2:service}(${3:dependencies}) {
+          this.${4:function} = ${4:function};
+
+          function ${4:function}() {
+
+          }
+        }
+      })();
+    """
+
+  'ngModule':
+    prefix: 'ngmodule'
+    body: """
+      (() => {
+        'use strict';
+
+        angular
+          .module('${1:module}', [
+              '${2:dependencies}'
+          ]);
+      })();
+    """
+
+  'ngDirective':
+    'prefix': 'ngdirective'
+    'body': """
+      (() => {
+        'use strict';
+
+        angular
+          .module('${1:module}')
+          .directive('${2:directive}', ${2:directive});
+
+        function ${2:directive}() {
+          const directive = {
+            restrict: '${3:EA}',
+            templateUrl: '${4:templateUrl}',
+            scope: {
+            },
+            link: link,
+            controllerAs: 'self',
+            bindToController: true
+          };
+
+          return directive;
+
+          function link(scope, el, attr, ctrl) {
+
+          }
+        }
+      })();
+    """
+
+
+'.erb':
+  '<% %>':
+    'prefix': 'rc'
+    'body': """
+      <% ${1:content} %>
+    """
+
+  '<%= %>':
+    'prefix': 're'
+    'body': """
+      <%= ${1:content} %>
+    """

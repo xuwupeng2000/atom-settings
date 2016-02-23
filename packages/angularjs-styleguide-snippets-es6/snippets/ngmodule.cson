@@ -1,0 +1,22 @@
+'.source.js':
+  'ngModule':
+    'prefix': 'ngmodule'
+    'body': """
+      (() => {
+          'use strict';
+
+          /**
+           * @ngdoc module
+           * @name ${1:module}
+           * @requires ${2:dependencies}
+           * @description
+           *
+           * The `${1:module}` ${4:description}.
+           *
+           */
+          angular
+              .module('${1:module}', [
+                  '${2:dependencies}'
+              ]);
+      })();
+    """

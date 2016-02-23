@@ -1,0 +1,39 @@
+'.source.js':
+  'ngFactory':
+    'prefix': 'ngfactory'
+    'body': """
+      (() => {
+          'use strict';
+
+          /**
+           * @ngdoc service
+           * @name ${2:factory}
+           * @module ${1:module}
+           * @requires ${3:dependencies}
+           * @description
+           *
+           * The `${2:factory}` factory ${5:description}.
+           *
+           */
+          angular
+              .module('${1:module}')
+              .factory('${2:factory}', ${2:factory});
+
+          ${2:factory}.$inject = ['${3:dependencies}'];
+
+          function ${2:factory}(${3:dependencies}) {
+              'ngInject';
+              const service = {
+                  ${4:function}: ${4:function}
+              };
+
+              return service;
+
+              ///////////
+
+              function ${4:function}() {
+
+              }
+          }
+      })();
+    """

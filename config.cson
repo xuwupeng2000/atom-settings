@@ -1,0 +1,21 @@
+"*":
+  core:
+    disabledPackages: [
+      "angularjs-styleguide-snippets-es6"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Monaco"
+    fontSize: 13
+    invisibles: {}
+  "exception-reporting":
+    userId: "07d72b5f-9efa-b75a-9068-af216de8d9de"
+  fonts:
+    fontFamily: "Inconsolata"
+  "one-light-ui":
+    layoutMode: "Compact"
+  welcome:
+    showOnStartup: false

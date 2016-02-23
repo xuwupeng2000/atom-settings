@@ -1,0 +1,35 @@
+{
+  "name": "atom-everydayrails-rspec",
+  "main": "./lib/atom-everydayrails-rspec",
+  "version": "0.2.0",
+  "description": "RSpec snippets based on Everyday Rails Testing with RSpec",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everydayrails/atom-everydayrails-rspec.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {},
+  "readme": "# atom-everydayrails-rspec package\n\nAtom snippets for RSpec, based on the style of Rails testing described in [Everyday Rails Testing with RSpec](https://leanpub.com/everydayrailsrspec).\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/everydayrails/atom-everydayrails-rspec/issues"
+  },
+  "homepage": "https://github.com/everydayrails/atom-everydayrails-rspec#readme",
+  "_id": "atom-everydayrails-rspec@0.2.0",
+  "_shasum": "c8de180ec1cc81b5d95fff202f7e42c90f139faa",
+  "_resolved": "file:../d-116111-3938-skzzr/package.tgz",
+  "_from": "../d-116111-3938-skzzr/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
